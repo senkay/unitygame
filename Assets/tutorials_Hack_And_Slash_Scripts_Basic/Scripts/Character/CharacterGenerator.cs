@@ -47,8 +47,8 @@ public class CharacterGenerator : MonoBehaviour {
 		/*
 		 * Edits made to the script from the live show #4
 		 */
-//		GameObject pc = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity) as GameObject;
-		GameObject pc = playerPrefab;
+		GameObject pc = Instantiate(playerPrefab, Vector3.zero, Quaternion.identity) as GameObject;
+		//GameObject pc = playerPrefab;
 		
 		/*
 		 * End Live Show #4 edits
