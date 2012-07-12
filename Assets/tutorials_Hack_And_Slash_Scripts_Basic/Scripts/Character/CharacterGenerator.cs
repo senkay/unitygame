@@ -17,7 +17,7 @@ using System;					//used for the Enum class
 
 public class CharacterGenerator : MonoBehaviour {
 	private PlayerCharacter _toon;
-	private const int STARTING_POINTS = 350;
+	private const int STARTING_POINTS = 280;
 	private const int MIN_STARTING_ATTRIBUTE_VALUE = 10;
 	private const int STARTING_VALUE = 50;
 	private int pointsLeft;
@@ -237,7 +237,8 @@ public class CharacterGenerator : MonoBehaviour {
 //			for(int cnt = 0; cnt < temp.Length; cnt++)
 //				Debug.Log( temp[cnt].BaseValue + " : " + temp[cnt].ExpToLevel );
 
-			Application.LoadLevel(GameSettings.levelNames[2]);
+			//Application.LoadLevel(GameSettings.levelNames[2]);
+			Application.LoadLevel(1);
 		}
 	}
 	
