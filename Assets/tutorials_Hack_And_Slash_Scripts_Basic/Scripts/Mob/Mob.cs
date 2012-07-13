@@ -42,6 +42,6 @@ public class Mob : BaseCharacter {
 	}
 	
 	public void DisplayHealth() {
-//		Messenger<int, int>.Broadcast("mob health update", curHealth, maxHealth);
+		Messenger<int, int>.Broadcast("mob health update", curHealth, maxHealth);
 	}
 }

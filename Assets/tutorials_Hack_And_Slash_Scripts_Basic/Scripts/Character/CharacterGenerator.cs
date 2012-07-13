@@ -17,7 +17,7 @@ using System;					//used for the Enum class
 
 public class CharacterGenerator : MonoBehaviour {
 	private PlayerCharacter _toon;
-	private const int STARTING_POINTS = 280;
+	private const int STARTING_POINTS = 290;
 	private const int MIN_STARTING_ATTRIBUTE_VALUE = 10;
 	private const int STARTING_VALUE = 50;
 	private int pointsLeft;
@@ -212,10 +212,10 @@ public class CharacterGenerator : MonoBehaviour {
 
 	//display the button that will call the save method when pressed, and then load the first level
 	private void DisplayCreateButton() {
-		if(GUI.Button(new Rect( Screen.width/ 2 - 50, statStartingPos + (10 * LINE_HEIGHT), 100, LINE_HEIGHT), "Next")) {
+		if(GUI.Button(new Rect( Screen.width/ 2 - 50, statStartingPos + (10 * LINE_HEIGHT), 100, LINE_HEIGHT), "Create")) {
 
 			// **** Changed this in tutorial #195 ****
-//			GameSettings gsScript = GameObject.Find("__GameSettings").GetComponent<GameSettings>();
+			GameSettings gsScript = GameObject.Find("__GameSettings").GetComponent<GameSettings>();
 			
 			//change the cur value of the vitals to the max modified value of that vital
 			UpdateCurVitalValues();
@@ -223,14 +223,14 @@ public class CharacterGenerator : MonoBehaviour {
 			
 			//save the character data
 			// **** Changed this in tutorial #195 ****
-//			gsScript.SaveCharacterData();
+			gsScript.SaveCharacterData();
 			
-			GameSetting2.pc = _toon;
-			GameSetting2.SaveName( _toon.Name );
-			GameSetting2.SaveAttributes( _toon.primaryAttribute );
-			GameSetting2.SaveVitals( _toon.vital );
+			//GameSetting2.pc = _toon;
+			//GameSetting2.SaveName( _toon.Name );
+			//GameSetting2.SaveAttributes( _toon.primaryAttribute );
+			//GameSetting2.SaveVitals( _toon.vital );
 //			PlayerPrefs.DeleteAll();
-			GameSetting2.SaveSkills( _toon.skill );
+			//GameSetting2.SaveSkills( _toon.skill );
 			
 //			Skill[] temp = GameSetting2.LoadSkills();
 			
@@ -238,7 +238,7 @@ public class CharacterGenerator : MonoBehaviour {
 //				Debug.Log( temp[cnt].BaseValue + " : " + temp[cnt].ExpToLevel );
 
 			//Application.LoadLevel(GameSettings.levelNames[2]);
-			Application.LoadLevel(1);
+			Application.LoadLevel("level1");
 		}
 	}
 	

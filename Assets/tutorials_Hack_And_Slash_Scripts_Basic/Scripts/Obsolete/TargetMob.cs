@@ -84,14 +84,14 @@ public class TargetMob : MonoBehaviour {
 		name.GetComponent<MeshRenderer>().enabled = true;
 		selectedTarget.GetComponent<Mob>().DisplayHealth();
 
-//		Messenger<bool>.Broadcast("show mob vitalbars", true);
+		Messenger<bool>.Broadcast("show mob vitalbars", true);
 	}
 	
 	private void DeselectTarget() {
 		selectedTarget.FindChild("Name").GetComponent<MeshRenderer>().enabled = false;
 
 		selectedTarget = null;
-//		Messenger<bool>.Broadcast("show mob vitalbars", false);
+		Messenger<bool>.Broadcast("show mob vitalbars", false);
 	}
 	
 	// Update is called once per frame
